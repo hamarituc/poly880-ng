@@ -4,6 +4,10 @@
 
   (paper "A4")
 
+  (title_block
+    (title "Polycomputer 880")
+  )
+
   (lib_symbols
   )
 
