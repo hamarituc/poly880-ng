@@ -95,6 +95,7 @@ MONRM1: LD      A,05H           ; KODE FUER CTC (TIMER)
 ;       EINTRITT        FUER RESTART 5
 ;
 ;*************************************************************************
+        DS      28H-$,0xFF      ; Anpassung an z80asm
         ORG     28H
         PUSH    AF
         LD      A,01H
@@ -105,6 +106,7 @@ MONRM1: LD      A,05H           ; KODE FUER CTC (TIMER)
 ;       EINTRITT        FUER RESTART 6
 ;
 ;*************************************************************************
+        DS      30H-$,0xFF      ; Anpassung an z80asm
         ORG     30H
         PUSH    AF
         LD      A,02H           ; URSACHE=PR.PUNKT
@@ -115,6 +117,7 @@ MONRM1: LD      A,05H           ; KODE FUER CTC (TIMER)
 ;       EINTRITTSPUNKT FUER INTERRUPTMODE 0 UND 1
 ;
 ;*************************************************************************
+        DS      38H-$,0xFF      ; Anpassung an z80asm
         ORG     38H
         JP      RAMANF
 ;*************************************************************************
@@ -151,6 +154,7 @@ NMIM2:  PUSH    BC              ; I UND EI ABSPEICHERN
 ;       EINTRITT        BEI NMI
 ;
 ;*************************************************************************
+        DS      66H-$,0xFF      ; Anpassung an z80asm
         ORG     66H
         JR      NMIM1
 ;*************************************************************************
