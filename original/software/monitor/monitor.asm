@@ -1,0 +1,5 @@
+include 'eintritt.asm'
+include 'konsole.asm'
+include 'aktionen.asm'
+include 'ram.asm'
+include 'lernsystemequ.asm'
