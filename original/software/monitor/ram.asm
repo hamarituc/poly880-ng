@@ -7,6 +7,8 @@
 ; FUNKTION: ORGANISIERT DEN RAMBEREICH DES MONITORS
 ;
 ;
+        DS      1400H-$         ; Ergänzung des Original-Codes für
+                                ; ROM-Aufteilung
         ORG     4000H
 ;       GLOBAL RAMANF RAMEND USERSP SYSTSP
 ;       GLOBAL ANZBER TASTBI PROGZU NMIZUS

@@ -520,6 +520,8 @@ NAMES:  DW      05F7EH
         DW      0DDCFH
         DB      00H
         DW      05BFDH
+        DS      0400H-$         ; Ergänzung des Original-Codes für
+                                ; ROM-Aufteilung
         ORG     1000H
 LSROM2:                         ; BEGINN DES 2. ROMS
 Z3EM1:  CALL    RINANZ
