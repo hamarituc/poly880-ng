@@ -1193,8 +1193,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 2515d289-cfe2-42d7-99bd-68f25817c966)
   )
-  (text "0x??84 - 0x??87\n0x??94 - 0x??97\n...\n0x??F4 - 0x??F7"
-    (at 153.67 62.484 0)
+  (text "0x84 - 0x87\n0x94 - 0x97\n...\n0xF4 - 0xF7" (at 153.67 62.484 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 33302620-3295-485b-8555-0341f72d8db3)
   )
@@ -1222,18 +1221,15 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid b0604248-0653-48ed-9281-b3229c82924a)
   )
-  (text "0x??A? - 0x??A?\n0x??B? - 0x??B?\n0x??E? - 0x??E?\n0x??F? - 0x??F?"
-    (at 234.95 49.022 0)
+  (text "0xA? - 0xA?\n0xB? - 0xB?\n0xE? - 0xE?\n0xF? - 0xF?" (at 234.95 49.022 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid b33c5f33-0fbe-4d0c-97d8-48082637966d)
   )
-  (text "0x??80 - 0x??83\n0x??90 - 0x??93\n...\n0x??F0 - 0x??F3"
-    (at 153.67 49.022 0)
+  (text "0x80 - 0x83\n0x90 - 0x93\n...\n0xF0 - 0xF3" (at 153.67 49.022 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid c91e72ff-5d28-473e-a9b4-c220cde9c41b)
   )
-  (text "0x??88 - 0x??8B\n0x??98 - 0x??9B\n...\n0x??F8 - 0x??FB"
-    (at 153.67 75.692 0)
+  (text "0x88 - 0x8B\n0x98 - 0x9B\n...\n0xF8 - 0xFB" (at 153.67 75.692 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid c9d8f060-00f8-446f-987b-d6989d7bb703)
   )
