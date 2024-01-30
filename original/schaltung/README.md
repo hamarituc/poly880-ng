@@ -34,3 +34,10 @@ beschrieben werden müssen.
 
 Das Signal `!M1` wird durch Gatter I28A mit `!RESETB` verknpüft, um so die
 PIO-Schaltkreise bei einem Reset zurückzusetzen.
+
+### Bus-Analysator
+
+Der Bus-Analysator zeigt den Zustand der Systembusse durch Leuchtdioden an. Den
+Strom der Leuchtdioden des Adress- und Steuerbusses nehmen die Inverter der
+Bustreiber auf. Für den Datenbus stehen mit T5 bis T12 separate Treiberstufen
+bereit. Die Anzeigelogik ist positiv, d.h. die LEDs aktiver Signale leuchten.
