@@ -47,8 +47,8 @@ Adressraum
 ----------
 
 Der Adressraum wird über die Gatter I18, I20B, I23, I27 und I42 dekodiert.
-Die Dekodierung ist nicht vollständig, sodass Speicher unter mehreren Adressen
-zugleich abgebildet werden.
+Die Dekodierung ist nicht vollständig, sodass Speicherstellen unter mehreren
+Adressen zugleich abgebildet werden.
 
 ### Festwertspeicher ROM
 
@@ -56,12 +56,12 @@ Die ROM-Schaltkreise sind als 1024x8 Bit Speicher organisiert. Es sind vier
 ROM-Steckplätze I5 bis I8 vorhanden, die sich auf folgende Adressbereiche
 aufteilen.
 
-| ROM | Anfangsadresse | Endadresse |
-|:---:|:--------------:|:----------:|
-| I5  | `0x0000`       | `0x0FFF`   |
-| I6  | `0x1000`       | `0x1FFF`   |
-| I7  | `0x2000`       | `0x2FFF`   |
-| I8  | `0x3000`       | `0x3FFF`   |
+| Anfangsadresse | Endadresse | ROM |
+|:--------------:|:----------:|:---:|
+| `0x0000`       | `0x0FFF`   | I5  |
+| `0x1000`       | `0x1FFF`   | I6  |
+| `0x2000`       | `0x2FFF`   | I7  |
+| `0x3000`       | `0x3FFF`   | I8  |
 
 I5 und I6 enthalten das Monitor-Programm. Die Steckplätze I7 und I8 sind
 standardmäßig nicht bestückt und frei für Erweiterungen. Das Speicherfenster
