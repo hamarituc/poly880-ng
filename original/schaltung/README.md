@@ -75,3 +75,53 @@ organisiert und hat eine Kapazität von 1kiB. Die Zuordnung der Adressleitungen
 ist willkürlich, um das Platinenlayout zu vereinfachen. Der RAM ist auf den
 Adressraum `0x4000` bis `0x7FFF` abgebildet und wiederholt sich 16 mal
 innerhalb dieses Fensters.
+
+### Ein-/Ausgabe
+
+Die I/O-Baugruppen sind über den bidirektionalen Datenbus angebunden. Folgende
+I/O-Komponenten stehen zur Verfügung:
+
+ * **PIO 1:** System-PIO für Peripherieanschlüsse, Display, Tastatur,
+   Einzelschelschrittsteuerung
+ * **PIO 2:** PIO-Schnittstelle für Nutzeranwendungen
+ * **CTC:** Zähler und Timer für Einzelschrittsteuerung und Nutzeranwendungen
+ * **Digit-Treiber:** Ansteuerung des Displays
+
+Die Adressdekodierung ist ebenfalls unvollständig und laut Handbuch wie folgt
+definiert:
+
+| Anfangsadresse | Endadresse | Gerät         |
+|:--------------:|:----------:| ------------- |
+| `0x80`         | `0x83`     | PIO 1         |
+| `0x84`         | `0x87`     | PIO 2         |
+| `0x88`         | `0x8B`     | CTC           |
+| `0x90`         | `0x93`     | PIO 1         |
+| `0x94`         | `0x97`     | PIO 2         |
+| `0x98`         | `0x9B`     | CTC           |
+| `0xA0`         | `0xBF`     | Digit-Treiber |
+| `0xC0`         | `0xC3`     | PIO 1         |
+| `0xC4`         | `0xC7`     | PIO 2         |
+| `0xC8`         | `0xCB`     | CTC           |
+| `0xD0`         | `0xD3`     | PIO 1         |
+| `0xD4`         | `0xD7`     | PIO 2         |
+| `0xD8`         | `0xDB`     | CTC           |
+| `0xE0`         | `0xFF`     | Digit-Treiber |
+
+Diese Angaben sind missverständlich, da laut Dekodierung folgende Bereiche
+sowohl durch PIO/CTC als auch den Digit-Treiber benutzt werden:
+
+ * `0xA0` - `0xAB`
+ * `0xB0` - `0xBB`
+ * `0xE0` - `0xEB`
+ * `0xF0` - `0xFB`
+
+Insbesondere die für den Digit-Treiber dokumentierte Adresse `0xA0` sollte
+daher nicht genutzt werden. Es wird empfohlen nur die Adressen zu benutzen, die
+auch das Monitorprogramm verwendet:
+
+| Adresse        | Gerät         |
+| -------------- | ------------- |
+| `0x80` - 0x83` | PIO 1         |
+| `0x84` - 0x87` | PIO 2         |
+| `0x88`         | CTC           |
+| `0xFC`         | Digit-Treiber |
