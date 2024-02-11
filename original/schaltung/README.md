@@ -125,3 +125,37 @@ auch das Monitorprogramm verwendet:
 | `0x84` - 0x87` | PIO 2         |
 | `0x88`         | CTC           |
 | `0xFC`         | Digit-Treiber |
+
+
+Peripherie
+----------
+
+### Anzeige
+
+Die acht 7-Segement-Anzeigen werden im Zeitmultiplexbetrieb angesteuert. Die
+Anoden Digits werden über die Digit-Treiber T19 bis T26 getrieben. Die
+Ansteuerung dieser Treiber erfolgt über die Schieberegister I40 und I41, welche
+als Latch fungieren. Die Latches werden direkt über den I/O-Adressraum durch
+das Signal `CLDIG` vom Adressdekoder angesteuert.
+
+Ein Low-Pegel aktiviert das Digit. Aus Programmierersicht ist die Logik
+positiv, da die Latch-Eingabe vom negierten Datenbus abgegriffen wird.
+Prinzipiell lassen sich mehr als ein Digit zeitgleich ansteuern, was aber in
+der Praxis wenig Sinn ergibt.
+
+Um eine ausreichende Helligkeit zu erzielen, ist der Stromfluss durch die
+Anzeigen größer dimensioniert als für den Dauerbetrieb zulässig. Ein
+dauerhaftes Aktivieren der Digits ist daher unzulässig und führt zu einer
+Zerstörung der Anzeigen. Um eine ungewollte Zerstörung durch Programmierfehler
+zu vermeiden, bilden T17 und T18 eine Schutzschaltung. Beim Aktivieren der
+Latches, wird C35 über T17 entladen. Das RC-Glied bestehend aus R147 und C35
+lädt sich nach dem Schreibzyklus langsam auf. Erfolgt innerhalb einer Zeit von
+ca. 3ms kein weiterer Schreibimpuls, hat sich C35 so weit aufgeladen, dass T18
+durchsteuert und die MC-Eingänge der Schieberegister auf Low-Pegel zieht.
+Spätestens nach 8 Taktzyklen nehmen damit alle Ausgänge der Schieberegister
+High-Pegel an und die Digits sind automatisch deaktiviert. Damit das
+Anzeigebild bestehen bleibt, muss also innerhalb von 3ms jeweils ein anderes
+Digit aktiviert werden.
+
+Die Ansteuerung der Segmente erfolgt über den Kanal A der System-PIO I2. Die
+Die Logik ist aus Programmierersicht ebenfalls positiv.
