@@ -159,3 +159,17 @@ Digit aktiviert werden.
 
 Die Ansteuerung der Segmente erfolgt über den Kanal A der System-PIO I2. Die
 Die Logik ist aus Programmierersicht ebenfalls positiv.
+
+### Tastatur
+
+Die Tastatur wird ebenfalls im Zeitmultiplexverfahren abgetastet. Die Tasten
+sind in einer Matrix von 8 Zeilen und 3 Spalten angeordnet. Die Abtastung der
+Zeilen erfolgt über den Digit-Treiber der 7-Segment-Anzeigee. Zur Abfrage der
+Tastatur muss daher der Refresh-Zyklus von 3ms eingehalten werden.
+
+Die Spaltensignale werden über den Kanal B der System-PIO I2 eingelesen. Die
+Entkopplung über die Dioden D2 bis D9 stellt sicher, dass bis zu zwei Tasten
+gleichzeitig gedrückt werden können. Werden mehr als zwei Tasten zeitgleich
+betätigt, kann es zur Erkennung von Phantom-Eingaben kommen.
+
+Die Entprellung der Tastatureingaben ist in Software zu realisieren.
