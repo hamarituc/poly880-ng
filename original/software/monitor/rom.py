@@ -3,7 +3,7 @@
 import argparse
 
 parser = argparse.ArgumentParser(
-    description = 'ROM-Abbilder extrahieren und Prüfsumme berechnen'
+    description = "ROM-Abbilder extrahieren und Prüfsumme berechnen"
 )
 
 parser.add_argument(

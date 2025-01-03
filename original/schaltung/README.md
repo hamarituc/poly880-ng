@@ -119,12 +119,12 @@ Insbesondere die für den Digit-Treiber dokumentierte Adresse `0xA0` sollte
 daher nicht genutzt werden. Es wird empfohlen nur die Adressen zu benutzen, die
 auch das Monitorprogramm verwendet:
 
-| Adresse        | Gerät         |
-| -------------- | ------------- |
-| `0x80` - 0x83` | PIO 1         |
-| `0x84` - 0x87` | PIO 2         |
-| `0x88`         | CTC           |
-| `0xFC`         | Digit-Treiber |
+| Adresse         | Gerät         |
+| --------------- | ------------- |
+| `0x80` - `0x83` | PIO 1         |
+| `0x84` - `0x87` | PIO 2         |
+| `0x88`          | CTC           |
+| `0xFC`          | Digit-Treiber |
 
 
 Peripherie

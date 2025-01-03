@@ -3,7 +3,7 @@
 import argparse
 
 parser = argparse.ArgumentParser(
-    description = 'ROM-Abbilder invertieren'
+    description = "ROM-Abbilder invertieren"
 )
 
 parser.add_argument(
