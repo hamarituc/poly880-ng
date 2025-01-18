@@ -127,6 +127,64 @@ auch das Monitorprogramm verwendet:
 | `0xFC`          | Digit-Treiber |
 
 
+Einzelschrittlogik
+------------------
+
+Die Einzelschrittsteuerung unterliegt einer komplexen Ablaufsteuerung. Relevant
+hierfür sind die Steuerbussignale `NMI` und `WAIT`. Ein aktives `NMI`-Signal
+bringt das Monitor-Programm zur Ausführung. Ein aktives `WAIT`-Signal fügt
+Wartezyklen ein und führt dazu zu einer stabilen Anzeige auf dem
+Bus-Analysator. Gesteuert wird die Einzelschrittsteuerung durch die Tasten
+`MON`, `MCYCL` und `CYCL`, sowie den Signalen `SEND` und `SCON`.
+
+Die rückgekoppelten Gatter `I34C`, `I34A` und `I33B` bilden eine
+Flip-Flop-Schaltung. Die Grundstellung wird durch drücken der Taste `MON`
+hergestellt. Hierdurch geht der Ausgang von `I34A` auf High und der
+Open-Kollektor-Ausgang von `I33B` auf Low. Der Ausgang von `I34C` liegt
+ebenfalls auf Low. Durch die Rückkopplung bleibt der Zustand auch nach
+loslassen der Taste `MON` erhalten. Zudem wird das Flip-Flop `I35B` gesetzt,
+wodurch das Signal `NMI` aktiv wird und das Monitorprogramm aufruft.
+
+Nach einem Reset befinden sich die Gatter `I34C`, `I34A` und `I33B` im selben
+Zustand, wie nach dem Drücken der `MON`-Taste. Lediglich das Flip-Flop `I35B`
+wird gelöscht, wodurch `NMI` nicht aktiv ist, d.h. die Programmabarbeitung beim
+Reset-Vektor beginnt.
+
+Beim Eintritt in den Monitor wird das Signal `SCON` auf High gesetzt, wodurch
+das Flip-Flop `I35A` gelöscht wird (sofern `SEND` nicht High ist). Dadurch geht
+der Ausgang von `I33B` auf High und deaktiviert den Set-Eingang an `I35B`. Die
+beiden anderen Gatter der Flip-Flop-Konstruktion behalten ihren Zustand. Beim
+Verlassen des Monitors geht `SCON` auf Low, setzt damit `I35B` zurück, wodurch
+das `NMI`-Signal deaktiviert wird und somit ein erneuter Eintritt in den
+Monitor verhindert wird.
+
+Beim Verlassen des Monitors wird im Einzelschrittbetrieb ein Timer gestellt,
+welcher einen kurzen High-Puls an `SEND` anlegt. Dieser Timer ist so gewählt,
+dass der Puls während des ersten Befehls nach Verlassen der
+Monitor-Interrupt-Routine aktiv wird. Hierdurch wird `NMI` wieder aktiv, sodass
+effektiv nach einem Befehl wieder in den Monitor eingetreten wird. Der Timer
+wird zudem während der Reset-Routine aktiviert, sodass nach einem Reset
+automatisch der Monitor aktiviert wird.
+
+Durch Betätigung der `MCYCL`-Taste wird der Einzeltyklenbetrieb aktiviert.
+`I34C` geht dabei auf High, `I34A` auf Low und folglich `I33B` auf High. Die
+`MCYCL`-Led beginnt zu leuchten. Innerhalb der Monitor-Routine ist `I35A`
+jedoch gelöscht, sodass über `I34B` und `I32B` sichergestellt ist, dass `I33D`
+nicht nach Masse durchschaltet. Innerhalb des Monitors werden demnach keine
+Wartezyklen eingefügt.
+
+Außerhalb des Monitor-Betriebs sind beide Eingänge von `I33D` high, sodass das
+`WAIT`-Signal dauerhaft aktiviert ist und die CPU Wartezyklen ausführt. Auf dem
+Busmonitor ist dann ein stabiler Zustand ablesbar. Betätigt man nun die
+`CYCL`-Taste, geht der Ausgang von `I32C` auf Low, wodurch die Kathode von `D1`
+zunächst auf negatives Potential gezogen wird. Der Eingang 13 von `I33D` geht
+ebenfalls auf Low und deaktiviert das `WAIT`-Signal. Die CPU beginnt den
+nächsten Speicherzyklus. Über `R19` und `D1` wird `C9` wieder geladen und der
+Eingang 13 von `I33C` erreicht vor dem nächsten Speicherzyklus wieder
+High-Pegel, sodass die CPU wieder anhält. Lässt man `CYCL` wieder los, stellt
+sich über `C9` der Grundzustand für den nächsten Zyklus ein.
+
+
 Peripherie
 ----------
 
