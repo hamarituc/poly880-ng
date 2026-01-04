@@ -133,9 +133,9 @@ Einzelschrittlogik
 Die Einzelschrittsteuerung unterliegt einer komplexen Ablaufsteuerung. Relevant
 hierfür sind die Steuerbussignale `NMI` und `WAIT`. Ein aktives `NMI`-Signal
 bringt das Monitor-Programm zur Ausführung. Ein aktives `WAIT`-Signal fügt
-Wartezyklen ein und führt dazu zu einer stabilen Anzeige auf dem
-Bus-Analysator. Gesteuert wird die Einzelschrittsteuerung durch die Tasten
-`MON`, `MCYCL` und `CYCL`, sowie den Signalen `SEND` und `SCON`.
+Wartezyklen ein und führt zu einer stabilen Anzeige auf dem Bus-Analysator.
+Gesteuert wird die Einzelschrittsteuerung durch die Tasten `MON`, `MCYCL` und
+`CYCL`, sowie den Signalen `SEND` und `SCON`.
 
 Die rückgekoppelten Gatter `I34C`, `I34A` und `I33B` bilden eine
 Flip-Flop-Schaltung. Die Grundstellung wird durch drücken der Taste `MON`
@@ -166,9 +166,9 @@ effektiv nach einem Befehl wieder in den Monitor eingetreten wird. Der Timer
 wird zudem während der Reset-Routine aktiviert, sodass nach einem Reset
 automatisch der Monitor aktiviert wird.
 
-Durch Betätigung der `MCYCL`-Taste wird der Einzeltyklenbetrieb aktiviert.
+Durch Betätigung der `MCYCL`-Taste wird der Einzelzyklenbetrieb aktiviert.
 `I34C` geht dabei auf High, `I34A` auf Low und folglich `I33B` auf High. Die
-`MCYCL`-Led beginnt zu leuchten. Innerhalb der Monitor-Routine ist `I35A`
+`MCYCL`-LED beginnt zu leuchten. Innerhalb der Monitor-Routine ist `I35A`
 jedoch gelöscht, sodass über `I34B` und `I32B` sichergestellt ist, dass `I33D`
 nicht nach Masse durchschaltet. Innerhalb des Monitors werden demnach keine
 Wartezyklen eingefügt.
