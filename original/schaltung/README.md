@@ -127,6 +127,16 @@ auch das Monitorprogramm verwendet:
 | `0xFC`          | Digit-Treiber |
 
 
+Takterzeugung
+-------------
+
+Der Takt wird mit einem Quarz-Oszillator bestehend aus I38C, I38D und Q1
+erzeugt. Über den Zähler I39 wird der Basistakt von 7.3728 MHz durch 4 (`CLB`)
+und durch 8 (`CLB/2`) geteilt. Das Signal `CLB` bildet den CPU-Takt. `CLB/2`
+ist nur für die Schieberegister I40 und I41 relevant, die die Digitreiber bei
+Ausbleiben eines Refresh-Impulses deaktivieren.
+
+
 Einzelschrittlogik
 ------------------
 
