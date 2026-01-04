@@ -241,3 +241,16 @@ gleichzeitig gedrückt werden können. Werden mehr als zwei Tasten zeitgleich
 betätigt, kann es zur Erkennung von Phantom-Eingaben kommen.
 
 Die Entprellung der Tastatureingaben ist in Software zu realisieren.
+
+### Tonbandschnittstelle
+
+Über die Tonbandschnittstelle werden Rechtecksignale ausgegeben und eingelesen.
+Die Ausgabe über `MOUT` wird durch die Spannungsteiler R64/R65 auf NF-Pegel
+gebracht und mit C31 Gleichspannungsfrei an den Rekorder ausgekoppelt. Die
+NF-Eingabe wird über C29 in einen Komparator bestehend aus T14 und T15
+eingekoppelt. Durch R62 und R63 wird an den Basis-Eingängen der Transistoren
+ein Arbeitspunkt von 2.5V eingestellt. Bei einer positiven Halbwelle steuert
+T14 durch, die Spannung an R61 steigt und T15 sperrt folglich. Hierdurch
+sperrt T16 ebenfalls und `MIN` geht auf Low-Pegel. Bei der negativen Halbwelle
+sperrt T14 und T14 wird leitend. Folglich steuert T16 durch und `MIN` geht
+damit auf High-Pegel.
