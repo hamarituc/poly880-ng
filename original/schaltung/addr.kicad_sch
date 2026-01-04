@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "ee2e0989-8d17-49a2-9367-e493ba799c7f")
 	(paper "A4")
 	(title_block
@@ -10,7 +10,9 @@
 	(lib_symbols
 		(symbol "Jumper:Jumper_2_Bridged"
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -101,9 +103,9 @@
 			)
 			(symbol "Jumper_2_Bridged_0_1"
 				(arc
-					(start 1.524 0.254)
+					(start -1.524 0.254)
 					(mid 0 0.762)
-					(end -1.524 0.254)
+					(end 1.524 0.254)
 					(stroke
 						(width 0)
 						(type default)
@@ -151,10 +153,13 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "RFT_Digitalschaltkreise:D100D"
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -437,24 +442,6 @@
 					)
 				)
 				(pin input line
-					(at -5.08 -2.54 0)
-					(length 2.54)
-					(name "B3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
 					(at -5.08 2.54 0)
 					(length 2.54)
 					(name "A3"
@@ -465,6 +452,24 @@
 						)
 					)
 					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -5.08 -2.54 0)
+					(length 2.54)
+					(name "B3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -610,10 +615,13 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "RFT_Digitalschaltkreise:D110D"
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -738,24 +746,6 @@
 					)
 				)
 				(pin input line
-					(at -5.08 -3.81 0)
-					(length 2.54)
-					(name "C1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
 					(at -5.08 0 0)
 					(length 2.54)
 					(name "B1"
@@ -766,6 +756,24 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -5.08 -3.81 0)
+					(length 2.54)
+					(name "C1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -910,6 +918,24 @@
 					)
 				)
 				(pin input line
+					(at -5.08 3.81 0)
+					(length 2.54)
+					(name "A3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
 					(at -5.08 0 0)
 					(length 2.54)
 					(name "B3"
@@ -956,24 +982,6 @@
 						)
 					)
 					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -5.08 3.81 0)
-					(length 2.54)
-					(name "A3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1031,10 +1039,13 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "RFT_Digitalschaltkreise:D120D"
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1176,24 +1187,6 @@
 						)
 					)
 				)
-				(pin no_connect line
-					(at 5.08 2.54 180)
-					(length 2.54) hide
-					(name "n.c."
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin input line
 					(at -5.08 -1.27 0)
 					(length 2.54)
@@ -1223,6 +1216,25 @@
 						)
 					)
 					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 5.08 2.54 180)
+					(length 2.54)
+					(hide yes)
+					(name "n.c."
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1263,6 +1275,24 @@
 					)
 				)
 				(pin input line
+					(at -5.08 3.81 0)
+					(length 2.54)
+					(name "A2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
 					(at -5.08 1.27 0)
 					(length 2.54)
 					(name "B2"
@@ -1273,24 +1303,6 @@
 						)
 					)
 					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at 5.08 2.54 180)
-					(length 2.54) hide
-					(name "n.c."
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1334,6 +1346,25 @@
 						)
 					)
 				)
+				(pin no_connect line
+					(at 5.08 2.54 180)
+					(length 2.54)
+					(hide yes)
+					(name "n.c."
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 				(pin output line
 					(at 5.08 0 180)
 					(length 2.54)
@@ -1345,24 +1376,6 @@
 						)
 					)
 					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -5.08 3.81 0)
-					(length 2.54)
-					(name "A2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1420,6 +1433,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+5V"
 			(power)
@@ -1497,7 +1511,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -1509,7 +1523,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -1523,7 +1537,8 @@
 			(symbol "+5V_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "+5V"
 						(effects
 							(font
@@ -1540,6 +1555,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
@@ -1619,7 +1635,8 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "GND"
 						(effects
 							(font
@@ -1636,7 +1653,233 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(text "0x0000 - 0x3FFF"
+		(exclude_from_sim no)
+		(at 74.93 73.152 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "06d2bc5f-d1d5-4be5-841a-5a0685aae3a4")
+	)
+	(text "0x0000 - 0x0FFF"
+		(exclude_from_sim no)
+		(at 92.71 82.042 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "24c7b382-4910-44f6-8c60-1ffe605c94a8")
+	)
+	(text "ROM4 (Erweiterung)"
+		(exclude_from_sim no)
+		(at 92.71 127.635 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2515d289-cfe2-42d7-99bd-68f25817c966")
+	)
+	(text "0x84 - 0x87\n0x94 - 0x97\n...\n0xF4 - 0xF7"
+		(exclude_from_sim no)
+		(at 153.67 62.484 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "33302620-3295-485b-8555-0341f72d8db3")
+	)
+	(text "0x2000 - 0x2FFF"
+		(exclude_from_sim no)
+		(at 92.71 109.982 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "33a308c9-4e1b-498e-889c-f9b95da801f2")
+	)
+	(text "0x1000 - 0x1FFF"
+		(exclude_from_sim no)
+		(at 92.71 96.012 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4cf0c027-9b17-437c-8e13-01d80f528fbe")
+	)
+	(text "ROM1"
+		(exclude_from_sim no)
+		(at 92.71 85.725 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "531c27fe-3e92-4046-95be-36a20984edf9")
+	)
+	(text "0x3000 - 0x3FFF"
+		(exclude_from_sim no)
+		(at 92.71 123.952 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "53e47204-92cf-437e-9c9e-27c66857d350")
+	)
+	(text "RAM"
+		(exclude_from_sim no)
+		(at 92.71 141.605 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6eda5005-7b34-4ee4-b77a-d016be3fc41c")
+	)
+	(text "ROM3 (Erweiterung)"
+		(exclude_from_sim no)
+		(at 92.71 113.665 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b0604248-0653-48ed-9281-b3229c82924a")
+	)
+	(text "0xA? - 0xA?\n0xB? - 0xB?\n0xE? - 0xE?\n0xF? - 0xF?"
+		(exclude_from_sim no)
+		(at 234.95 49.022 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b33c5f33-0fbe-4d0c-97d8-48082637966d")
+	)
+	(text "0x80 - 0x83\n0x90 - 0x93\n...\n0xF0 - 0xF3"
+		(exclude_from_sim no)
+		(at 153.67 49.022 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c91e72ff-5d28-473e-a9b4-c220cde9c41b")
+	)
+	(text "0x88 - 0x8B\n0x98 - 0x9B\n...\n0xF8 - 0xFB"
+		(exclude_from_sim no)
+		(at 153.67 75.692 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c9d8f060-00f8-446f-987b-d6989d7bb703")
+	)
+	(text "ROM2"
+		(exclude_from_sim no)
+		(at 92.71 99.695 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f49640ff-2bd7-4099-b1b5-b6ff625b6e17")
+	)
+	(text "0x4000 - 0x7FFF"
+		(exclude_from_sim no)
+		(at 92.964 137.668 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fe04e08b-cbaf-4e77-bd2b-d197f8ebcfac")
+	)
+	(text_box "Die Zuordnung der Eingangs-PIN von für ID20D und I27A bis C sowie die Beschaltung von I42 wurde durch Platinenanalyse bestimmt. Es waren keine Angaben im Originalschaltplan vorhanden.\n\nDie Beschaltung ist aber konsistent zu rfe 33/5 (1984) S. 284-285."
+		(exclude_from_sim no)
+		(at 193.04 60.96 0)
+		(size 60.96 17.78)
+		(margins 0.9524 0.9524 0.9524 0.9524)
+		(stroke
+			(width -0.0001)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "47d703f8-26c2-4a77-b618-ffb346309bcd")
+	)
+	(text_box "Entsprechend Seite 80 des Bedienhandbuchs, sind folgende I/O-Adressen definiert:\n\n- 0x80 - 0x83: PIO 1 (IOCS0)\n- 0x84 - 0x87: PIO 2 (IOCS1)\n- 0x88 - 0x8B: CTC   (IOCS2)\n- 0xA0:         Digit-Treiber\n\nAufgrund der unvollständigen Adressdekodierung, ist der I/O-Adressraum laut Seite 81 des Handbuchs effektiv wie folgt aufgebaut:\n\n- 0x80 - 0x8B: PIO 1, PIO 2, CTC\n- 0x90 - 0x9B: PIO 1, PIO 2, CTC\n- 0xA0 - 0xBF: Digit-Treiber\n- 0xC0 - 0xCB: PIO 1, PIO 2, CTC\n- 0xD0 - 0xDB: PIO 1, PIO 2, CTC\n- 0xE0 - 0xFF: Digit-Treiber\n\nDiese Adressraumaufteilung ist missverständlich, da laut Dekodierung folgende Bereiche sowohl durch PIO/CTC als auch durch den Digit-Treiber belegt sind:\n\n- 0xA0 - 0xAB\n- 0xB0 - 0xBB\n- 0xE0 - 0xEB\n- 0xF0 - 0xFB\n\nInsbesondere die für den Digit-Treiber dokumentierte Adresse 0xA0 sollte daher nicht genutzt werden. Das Monitor-Programm benutzt zum Zugriff folgende Adressen und vermeidet damit Zugriffe auf mehrdeutig verwendete Adressen:\n\n- 0x80 - 0x83: PIO\n- 0x88: CTC\n- 0xFC: Digit-Treiber"
+		(exclude_from_sim no)
+		(at 132.08 86.36 0)
+		(size 121.92 68.58)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "7a5dfe6e-afa5-47f5-a352-3ca0c6bc6883")
+	)
+	(text_box "Die ROM- und RAM-Bausteine schöpfen den Adressraum von 12 Bits nicht vollständig aus, sodass sie innerhalb Ihrers Fensters mehrfach hintereinander erscheinen."
+		(exclude_from_sim no)
+		(at 58.42 144.78 0)
+		(size 58.674 7.62)
+		(margins 0.9524 0.9524 0.9524 0.9524)
+		(stroke
+			(width -0.0001)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "d64ccf6d-6c68-421c-9325-9e1085185b0f")
 	)
 	(junction
 		(at 222.25 48.26)
@@ -3127,231 +3370,8 @@
 		)
 		(uuid "fa1de0ee-72a9-456d-9d5e-22a876e8de92")
 	)
-	(text_box "Die Zuordnung der Eingangs-PIN von für ID20D und I27A bis C sowie die Beschaltung von I42 wurde durch Platinenanalyse bestimmt. Es waren keine Angaben im Originalschaltplan vorhanden.\n\nDie Beschaltung ist aber konsistent zu rfe 33/5 (1984) S. 284-285."
-		(exclude_from_sim no)
-		(at 193.04 60.96 0)
-		(size 60.96 17.78)
-		(stroke
-			(width -0.0001)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "47d703f8-26c2-4a77-b618-ffb346309bcd")
-	)
-	(text_box "Entsprechend Seite 80 des Bedienhandbuchs, sind folgende I/O-Adressen definiert:\n\n- 0x80 - 0x83: PIO 1 (IOCS0)\n- 0x84 - 0x87: PIO 2 (IOCS1)\n- 0x88 - 0x8B: CTC   (IOCS2)\n- 0xA0:         Digit-Treiber\n\nAufgrund der unvollständigen Adressdekodierung, ist der I/O-Adressraum laut Seite 81 des Handbuchs effektiv wie folgt aufgebaut:\n\n- 0x80 - 0x8B: PIO 1, PIO 2, CTC\n- 0x90 - 0x9B: PIO 1, PIO 2, CTC\n- 0xA0 - 0xBF: Digit-Treiber\n- 0xC0 - 0xCB: PIO 1, PIO 2, CTC\n- 0xD0 - 0xDB: PIO 1, PIO 2, CTC\n- 0xE0 - 0xFF: Digit-Treiber\n\nDiese Adressraumaufteilung ist missverständlich, da laut Dekodierung folgende Bereiche sowohl durch PIO/CTC als auch durch den Digit-Treiber belegt sind:\n\n- 0xA0 - 0xAB\n- 0xB0 - 0xBB\n- 0xE0 - 0xEB\n- 0xF0 - 0xFB\n\nInsbesondere die für den Digit-Treiber dokumentierte Adresse 0xA0 sollte daher nicht genutzt werden. Das Monitor-Programm benutzt zum Zugriff folgende Adressen und vermeidet damit Zugriffe auf mehrdeutig verwendete Adressen:\n\n- 0x80 - 0x83: PIO\n- 0x88: CTC\n- 0xFC: Digit-Treiber"
-		(exclude_from_sim no)
-		(at 132.08 86.36 0)
-		(size 121.92 68.58)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "7a5dfe6e-afa5-47f5-a352-3ca0c6bc6883")
-	)
-	(text_box "Die ROM- und RAM-Bausteine schöpfen den Adressraum von 12 Bits nicht vollständig aus, sodass sie innerhalb Ihrers Fensters mehrfach hintereinander erscheinen."
-		(exclude_from_sim no)
-		(at 58.42 144.78 0)
-		(size 58.674 7.62)
-		(stroke
-			(width -0.0001)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "d64ccf6d-6c68-421c-9325-9e1085185b0f")
-	)
-	(text "0x0000 - 0x3FFF"
-		(exclude_from_sim no)
-		(at 74.93 73.152 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "06d2bc5f-d1d5-4be5-841a-5a0685aae3a4")
-	)
-	(text "0x0000 - 0x0FFF"
-		(exclude_from_sim no)
-		(at 92.71 82.042 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "24c7b382-4910-44f6-8c60-1ffe605c94a8")
-	)
-	(text "ROM4 (Erweiterung)"
-		(exclude_from_sim no)
-		(at 92.71 127.635 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "2515d289-cfe2-42d7-99bd-68f25817c966")
-	)
-	(text "0x84 - 0x87\n0x94 - 0x97\n...\n0xF4 - 0xF7"
-		(exclude_from_sim no)
-		(at 153.67 62.484 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "33302620-3295-485b-8555-0341f72d8db3")
-	)
-	(text "0x2000 - 0x2FFF"
-		(exclude_from_sim no)
-		(at 92.71 109.982 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "33a308c9-4e1b-498e-889c-f9b95da801f2")
-	)
-	(text "0x1000 - 0x1FFF"
-		(exclude_from_sim no)
-		(at 92.71 96.012 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "4cf0c027-9b17-437c-8e13-01d80f528fbe")
-	)
-	(text "ROM1"
-		(exclude_from_sim no)
-		(at 92.71 85.725 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "531c27fe-3e92-4046-95be-36a20984edf9")
-	)
-	(text "0x3000 - 0x3FFF"
-		(exclude_from_sim no)
-		(at 92.71 123.952 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "53e47204-92cf-437e-9c9e-27c66857d350")
-	)
-	(text "RAM"
-		(exclude_from_sim no)
-		(at 92.71 141.605 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "6eda5005-7b34-4ee4-b77a-d016be3fc41c")
-	)
-	(text "ROM3 (Erweiterung)"
-		(exclude_from_sim no)
-		(at 92.71 113.665 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "b0604248-0653-48ed-9281-b3229c82924a")
-	)
-	(text "0xA? - 0xA?\n0xB? - 0xB?\n0xE? - 0xE?\n0xF? - 0xF?"
-		(exclude_from_sim no)
-		(at 234.95 49.022 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "b33c5f33-0fbe-4d0c-97d8-48082637966d")
-	)
-	(text "0x80 - 0x83\n0x90 - 0x93\n...\n0xF0 - 0xF3"
-		(exclude_from_sim no)
-		(at 153.67 49.022 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c91e72ff-5d28-473e-a9b4-c220cde9c41b")
-	)
-	(text "0x88 - 0x8B\n0x98 - 0x9B\n...\n0xF8 - 0xFB"
-		(exclude_from_sim no)
-		(at 153.67 75.692 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c9d8f060-00f8-446f-987b-d6989d7bb703")
-	)
-	(text "ROM2"
-		(exclude_from_sim no)
-		(at 92.71 99.695 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "f49640ff-2bd7-4099-b1b5-b6ff625b6e17")
-	)
-	(text "0x4000 - 0x7FFF"
-		(exclude_from_sim no)
-		(at 92.964 137.668 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "fe04e08b-cbaf-4e77-bd2b-d197f8ebcfac")
-	)
 	(label "AB7"
 		(at 134.62 76.2 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3362,7 +3382,6 @@
 	)
 	(label "~{AB12}"
 		(at 60.96 86.36 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3373,7 +3392,6 @@
 	)
 	(label "AB13"
 		(at 60.96 110.49 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3384,7 +3402,6 @@
 	)
 	(label "~{AB14}"
 		(at 60.96 66.04 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3395,7 +3412,6 @@
 	)
 	(label "AB14"
 		(at 60.96 142.24 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3406,7 +3422,6 @@
 	)
 	(label "AB7"
 		(at 134.62 53.34 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3417,7 +3432,6 @@
 	)
 	(label "AB3"
 		(at 134.62 80.01 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3428,7 +3442,6 @@
 	)
 	(label "~{AB2}"
 		(at 134.62 45.72 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3439,7 +3452,6 @@
 	)
 	(label "~{AB12}"
 		(at 60.96 114.3 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3450,7 +3462,6 @@
 	)
 	(label "~{AB15}"
 		(at 60.96 138.43 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3461,7 +3472,6 @@
 	)
 	(label "AB12"
 		(at 60.96 120.65 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3472,7 +3482,6 @@
 	)
 	(label "~{AB3}"
 		(at 134.62 49.53 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3483,7 +3492,6 @@
 	)
 	(label "AB2"
 		(at 134.62 66.675 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3494,7 +3502,6 @@
 	)
 	(label "AB13"
 		(at 60.96 128.27 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3505,7 +3512,6 @@
 	)
 	(label "~{AB13}"
 		(at 60.96 100.33 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3516,7 +3522,6 @@
 	)
 	(label "~{AB15}"
 		(at 60.96 58.42 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3527,7 +3532,6 @@
 	)
 	(label "~{AB3}"
 		(at 134.62 62.865 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3538,7 +3542,6 @@
 	)
 	(label "AB7"
 		(at 195.58 53.34 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3549,7 +3552,6 @@
 	)
 	(label "AB7"
 		(at 134.62 59.055 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3560,7 +3562,6 @@
 	)
 	(label "AB5"
 		(at 195.58 48.26 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3571,7 +3572,6 @@
 	)
 	(label "~{AB13}"
 		(at 60.96 78.74 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3582,7 +3582,6 @@
 	)
 	(label "AB12"
 		(at 60.96 92.71 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3593,7 +3592,6 @@
 	)
 	(label "~{AB2}"
 		(at 134.62 72.39 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3605,7 +3603,6 @@
 	(hierarchical_label "~{MCS1}"
 		(shape output)
 		(at 111.76 96.52 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3617,7 +3614,6 @@
 	(hierarchical_label "RDB"
 		(shape input)
 		(at 68.58 40.64 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3629,7 +3625,6 @@
 	(hierarchical_label "~{MCS4}"
 		(shape output)
 		(at 111.76 138.43 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3641,7 +3636,6 @@
 	(hierarchical_label "{AB[0..15] ~{AB[0..15]}}"
 		(shape input)
 		(at 53.34 30.48 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3653,7 +3647,6 @@
 	(hierarchical_label "~{IOCS2}"
 		(shape output)
 		(at 175.26 76.2 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3665,7 +3658,6 @@
 	(hierarchical_label "~{MCS3}"
 		(shape output)
 		(at 111.76 124.46 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3677,7 +3669,6 @@
 	(hierarchical_label "~{IOCS0}"
 		(shape output)
 		(at 175.26 49.53 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3689,7 +3680,6 @@
 	(hierarchical_label "IORQB"
 		(shape input)
 		(at 208.28 50.8 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3701,7 +3691,6 @@
 	(hierarchical_label "~{IOCS1}"
 		(shape output)
 		(at 175.26 62.865 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3713,7 +3702,6 @@
 	(hierarchical_label "CLDIG"
 		(shape output)
 		(at 256.54 49.53 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3725,7 +3713,6 @@
 	(hierarchical_label "MREQB"
 		(shape input)
 		(at 68.58 45.72 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3737,7 +3724,6 @@
 	(hierarchical_label "DIEN"
 		(shape output)
 		(at 111.76 45.72 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3749,7 +3735,6 @@
 	(hierarchical_label "~{MCS2}"
 		(shape output)
 		(at 111.76 110.49 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3761,7 +3746,6 @@
 	(hierarchical_label "~{MCS0}"
 		(shape output)
 		(at 111.76 82.55 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3773,7 +3757,6 @@
 	(hierarchical_label "WRB"
 		(shape input)
 		(at 208.28 45.72 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)

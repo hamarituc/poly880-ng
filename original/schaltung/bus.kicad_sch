@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "653b4dd4-3990-4b34-8f33-b31c889b8a0c")
 	(paper "A4")
 	(title_block
@@ -9,9 +9,13 @@
 	)
 	(lib_symbols
 		(symbol "Device:R_Small"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.254) hide)
+				(offset 0.254)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -129,11 +133,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "RFT_Optoelektronik:VQA13"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -229,19 +238,7 @@
 				)
 				(polyline
 					(pts
-						(xy 4.064 4.064) (xy 3.556 4.064)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 2.54) (xy 4.064 4.064) (xy 4.064 3.556)
+						(xy 1.27 2.54) (xy 2.794 4.064) (xy 2.794 3.556) (xy 2.794 4.064) (xy 2.286 4.064)
 					)
 					(stroke
 						(width 0)
@@ -265,7 +262,7 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 2.54) (xy 2.794 4.064) (xy 2.794 3.556) (xy 2.794 4.064) (xy 2.286 4.064)
+						(xy 2.54 2.54) (xy 4.064 4.064) (xy 4.064 3.556)
 					)
 					(stroke
 						(width 0)
@@ -275,22 +272,16 @@
 						(type none)
 					)
 				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
+				(polyline
+					(pts
+						(xy 4.064 4.064) (xy 3.556 4.064)
 					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
 				(pin passive line
@@ -311,11 +302,32 @@
 						)
 					)
 				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "RFT_Transistoren_und_Dioden:SC308"
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -378,6 +390,18 @@
 			(symbol "SC308_0_1"
 				(polyline
 					(pts
+						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
 						(xy 0.635 0.635) (xy 2.54 2.54)
 					)
 					(stroke
@@ -400,12 +424,11 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
-					)
+				(circle
+					(center 1.27 0)
+					(radius 2.8194)
 					(stroke
-						(width 0.508)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -424,37 +447,8 @@
 						(type outline)
 					)
 				)
-				(circle
-					(center 1.27 0)
-					(radius 2.8194)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
 			)
 			(symbol "SC308_1_1"
-				(pin passive line
-					(at 2.54 5.08 270)
-					(length 2.54)
-					(name "C"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin input line
 					(at -5.08 0 0)
 					(length 5.715)
@@ -466,6 +460,24 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -492,10 +504,13 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "RFT_Transistoren_und_Dioden:SS218"
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -558,6 +573,18 @@
 			(symbol "SS218_0_1"
 				(polyline
 					(pts
+						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
 						(xy 0.635 0.635) (xy 2.54 2.54)
 					)
 					(stroke
@@ -580,12 +607,11 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
-					)
+				(circle
+					(center 1.27 0)
+					(radius 2.8194)
 					(stroke
-						(width 0.508)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -604,37 +630,8 @@
 						(type outline)
 					)
 				)
-				(circle
-					(center 1.27 0)
-					(radius 2.8194)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
 			)
 			(symbol "SS218_1_1"
-				(pin passive line
-					(at 2.54 5.08 270)
-					(length 2.54)
-					(name "C"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin input line
 					(at -5.08 0 0)
 					(length 5.715)
@@ -646,6 +643,24 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -672,6 +687,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+5V"
 			(power)
@@ -749,7 +765,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -761,7 +777,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -775,7 +791,8 @@
 			(symbol "+5V_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "+5V"
 						(effects
 							(font
@@ -792,6 +809,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
@@ -871,7 +889,8 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "GND"
 						(effects
 							(font
@@ -888,6 +907,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 	)
 	(junction
@@ -4194,7 +4214,6 @@
 	)
 	(label "~{DO1}"
 		(at 228.6 101.6 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4205,7 +4224,6 @@
 	)
 	(label "~{AB15}"
 		(at 162.56 48.26 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4216,7 +4234,6 @@
 	)
 	(label "DB1"
 		(at 208.28 101.6 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4227,7 +4244,6 @@
 	)
 	(label "~{AB15}"
 		(at 226.06 48.26 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4238,7 +4254,6 @@
 	)
 	(label "DB3"
 		(at 157.48 101.6 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4249,7 +4264,6 @@
 	)
 	(label "~{DO7}"
 		(at 76.2 101.6 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4260,7 +4274,6 @@
 	)
 	(label "~{AB15}"
 		(at 238.76 48.26 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4271,7 +4284,6 @@
 	)
 	(label "~{AB15}"
 		(at 99.06 48.26 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4282,7 +4294,6 @@
 	)
 	(label "~{AB15}"
 		(at 137.16 48.26 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4293,7 +4304,6 @@
 	)
 	(label "~{AB15}"
 		(at 73.66 48.26 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4304,7 +4314,6 @@
 	)
 	(label "DB7"
 		(at 55.88 101.6 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4315,7 +4324,6 @@
 	)
 	(label "~{DO4}"
 		(at 152.4 101.6 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4326,7 +4334,6 @@
 	)
 	(label "DB6"
 		(at 81.28 101.6 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4337,7 +4344,6 @@
 	)
 	(label "~{AB15}"
 		(at 149.86 48.26 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4348,7 +4354,6 @@
 	)
 	(label "DB5"
 		(at 106.68 101.6 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4359,7 +4364,6 @@
 	)
 	(label "DB2"
 		(at 182.88 101.6 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4370,7 +4374,6 @@
 	)
 	(label "~{AB15}"
 		(at 175.26 48.26 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4381,7 +4384,6 @@
 	)
 	(label "~{AB15}"
 		(at 251.46 48.26 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4392,7 +4394,6 @@
 	)
 	(label "DB0"
 		(at 233.68 101.6 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4403,7 +4404,6 @@
 	)
 	(label "~{AB15}"
 		(at 187.96 48.26 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4414,7 +4414,6 @@
 	)
 	(label "~{DO6}"
 		(at 101.6 101.6 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4425,7 +4424,6 @@
 	)
 	(label "~{AB15}"
 		(at 86.36 48.26 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4436,7 +4434,6 @@
 	)
 	(label "~{DO3}"
 		(at 177.8 101.6 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4447,7 +4444,6 @@
 	)
 	(label "DB4"
 		(at 132.08 101.6 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4458,7 +4454,6 @@
 	)
 	(label "~{AB15}"
 		(at 111.76 48.26 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4469,7 +4464,6 @@
 	)
 	(label "~{DO5}"
 		(at 127 101.6 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4480,7 +4474,6 @@
 	)
 	(label "~{DO0}"
 		(at 254 101.6 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4491,7 +4484,6 @@
 	)
 	(label "~{AB15}"
 		(at 213.36 48.26 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4502,7 +4494,6 @@
 	)
 	(label "~{AB15}"
 		(at 60.96 48.26 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4513,7 +4504,6 @@
 	)
 	(label "~{AB15}"
 		(at 200.66 48.26 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4524,7 +4514,6 @@
 	)
 	(label "~{DO2}"
 		(at 203.2 101.6 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4535,7 +4524,6 @@
 	)
 	(label "~{AB15}"
 		(at 124.46 48.26 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4547,7 +4535,6 @@
 	(hierarchical_label "~{RDB}"
 		(shape input)
 		(at 111.76 142.24 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4559,7 +4546,6 @@
 	(hierarchical_label "~{DO[0..7]}"
 		(shape output)
 		(at 264.16 109.22 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4571,7 +4557,6 @@
 	(hierarchical_label "~{INTB}"
 		(shape input)
 		(at 154.94 144.78 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4583,7 +4568,6 @@
 	(hierarchical_label "{AB[0..15] ~{AB[0..15]}}"
 		(shape input)
 		(at 45.72 50.8 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4595,7 +4579,6 @@
 	(hierarchical_label "~{WAITB}"
 		(shape input)
 		(at 215.9 144.78 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4607,7 +4590,6 @@
 	(hierarchical_label "~{HALTB}"
 		(shape input)
 		(at 137.16 142.24 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4619,7 +4601,6 @@
 	(hierarchical_label "~{IORQB}"
 		(shape input)
 		(at 99.06 142.24 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4631,7 +4612,6 @@
 	(hierarchical_label "DB[0..7]"
 		(shape bidirectional)
 		(at 45.72 104.14 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4643,7 +4623,6 @@
 	(hierarchical_label "~{MREQB}"
 		(shape input)
 		(at 86.36 142.24 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4655,7 +4634,6 @@
 	(hierarchical_label "~{M1B}"
 		(shape input)
 		(at 73.66 142.24 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4667,7 +4645,6 @@
 	(hierarchical_label "~{NMIB}"
 		(shape input)
 		(at 185.42 144.78 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4679,7 +4656,6 @@
 	(hierarchical_label "~{WRB}"
 		(shape input)
 		(at 124.46 142.24 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)

@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "c3734242-8e2e-4b7a-b5e0-08a1edc69b56")
 	(paper "A4")
 	(title_block
@@ -9,9 +9,13 @@
 	)
 	(lib_symbols
 		(symbol "Device:C_Polarized_Small"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.254) hide)
+				(offset 0.254)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -80,17 +84,6 @@
 			)
 			(symbol "C_Polarized_Small_0_1"
 				(rectangle
-					(start -1.524 -0.3048)
-					(end 1.524 -0.6858)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
 					(start -1.524 0.6858)
 					(end 1.524 0.3048)
 					(stroke
@@ -99,6 +92,17 @@
 					)
 					(fill
 						(type none)
+					)
+				)
+				(rectangle
+					(start -1.524 -0.3048)
+					(end 1.524 -0.6858)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
 					)
 				)
 				(polyline
@@ -164,11 +168,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:C_Small"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.254) hide)
+				(offset 0.254)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -238,10 +247,10 @@
 			(symbol "C_Small_0_1"
 				(polyline
 					(pts
-						(xy -1.524 -0.508) (xy 1.524 -0.508)
+						(xy -1.524 0.508) (xy 1.524 0.508)
 					)
 					(stroke
-						(width 0.3302)
+						(width 0.3048)
 						(type default)
 					)
 					(fill
@@ -250,10 +259,10 @@
 				)
 				(polyline
 					(pts
-						(xy -1.524 0.508) (xy 1.524 0.508)
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
 					)
 					(stroke
-						(width 0.3048)
+						(width 0.3302)
 						(type default)
 					)
 					(fill
@@ -299,11 +308,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R_Small"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.254) hide)
+				(offset 0.254)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -421,10 +435,13 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "RFT_Digitalschaltkreise:U202D"
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -490,17 +507,6 @@
 			)
 			(symbol "U202D_1_1"
 				(circle
-					(center -6.6548 -15.24)
-					(radius 0.2032)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
 					(center -6.6548 -12.7)
 					(radius 0.2032)
 					(stroke
@@ -511,15 +517,26 @@
 						(type outline)
 					)
 				)
-				(rectangle
-					(start -6.35 -11.43)
-					(end -2.54 -16.51)
+				(circle
+					(center -6.6548 -15.24)
+					(radius 0.2032)
 					(stroke
 						(width 0)
 						(type default)
 					)
 					(fill
-						(type none)
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -6.35 16.51)
+					(end 6.35 -16.51)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
 					)
 				)
 				(rectangle
@@ -534,14 +551,14 @@
 					)
 				)
 				(rectangle
-					(start -6.35 16.51)
-					(end 6.35 -16.51)
+					(start -6.35 -11.43)
+					(end -2.54 -16.51)
 					(stroke
-						(width 0.254)
+						(width 0)
 						(type default)
 					)
 					(fill
-						(type background)
+						(type none)
 					)
 				)
 				(rectangle
@@ -643,14 +660,6 @@
 						)
 					)
 				)
-				(text "DO"
-					(at 4.445 0 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
 				(text "~{CS}"
 					(at -4.445 -12.7 0)
 					(effects
@@ -667,161 +676,25 @@
 						)
 					)
 				)
-				(pin input line
-					(at -8.89 0 0)
-					(length 2.54)
-					(name "A6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
+				(text "DO"
+					(at 4.445 0 0)
+					(effects
+						(font
+							(size 1.27 1.27)
 						)
 					)
 				)
 				(pin input line
-					(at -8.89 -10.16 0)
+					(at -8.89 15.24 0)
 					(length 2.54)
-					(name "DI"
+					(name "A0"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin tri_state line
-					(at 8.89 0 180)
-					(length 2.54)
-					(name "DO"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -8.89 -12.7 0)
-					(length 2.54)
-					(name "~{CS}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -8.89 -7.62 0)
-					(length 2.54)
-					(name "A9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -8.89 -5.08 0)
-					(length 2.54)
-					(name "A8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -8.89 -2.54 0)
-					(length 2.54)
-					(name "A7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -8.89 2.54 0)
-					(length 2.54)
-					(name "A5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -8.89 -15.24 0)
-					(length 2.54)
-					(name "~{WE}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
+					(number "8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -902,16 +775,160 @@
 					)
 				)
 				(pin input line
-					(at -8.89 15.24 0)
+					(at -8.89 2.54 0)
 					(length 2.54)
-					(name "A0"
+					(name "A5"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "8"
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -8.89 0 0)
+					(length 2.54)
+					(name "A6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -8.89 -2.54 0)
+					(length 2.54)
+					(name "A7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -8.89 -5.08 0)
+					(length 2.54)
+					(name "A8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -8.89 -7.62 0)
+					(length 2.54)
+					(name "A9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -8.89 -10.16 0)
+					(length 2.54)
+					(name "DI"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -8.89 -12.7 0)
+					(length 2.54)
+					(name "~{CS}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -8.89 -15.24 0)
+					(length 2.54)
+					(name "~{WE}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin tri_state line
+					(at 8.89 0 180)
+					(length 2.54)
+					(name "DO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -969,6 +986,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "RFT_Digitalschaltkreise:U555C"
 			(exclude_from_sim no)
@@ -1043,17 +1061,6 @@
 					)
 				)
 				(rectangle
-					(start -6.35 -10.16)
-					(end -1.27 -20.32)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
 					(start -6.35 20.32)
 					(end -1.27 -7.62)
 					(stroke
@@ -1076,6 +1083,17 @@
 					)
 				)
 				(rectangle
+					(start -6.35 -10.16)
+					(end -1.27 -20.32)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
 					(start 1.27 20.32)
 					(end 6.35 -20.32)
 					(stroke
@@ -1084,6 +1102,132 @@
 					)
 					(fill
 						(type none)
+					)
+				)
+				(pin input line
+					(at -8.89 19.05 0)
+					(length 2.54)
+					(name "A0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -8.89 16.51 0)
+					(length 2.54)
+					(name "A1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -8.89 13.97 0)
+					(length 2.54)
+					(name "A2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -8.89 11.43 0)
+					(length 2.54)
+					(name "A3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -8.89 8.89 0)
+					(length 2.54)
+					(name "A4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -8.89 6.35 0)
+					(length 2.54)
+					(name "A5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -8.89 3.81 0)
+					(length 2.54)
+					(name "A6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
 					)
 				)
 				(pin input line
@@ -1097,6 +1241,168 @@
 						)
 					)
 					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -8.89 -1.27 0)
+					(length 2.54)
+					(name "A8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "23"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -8.89 -3.81 0)
+					(length 2.54)
+					(name "A9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -8.89 -6.35 0)
+					(length 2.54)
+					(name "PR"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -8.89 -8.89 0)
+					(length 2.54)
+					(name "~{CS}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -8.89 -11.43 0)
+					(length 2.54)
+					(name "Udd"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -8.89 -13.97 0)
+					(length 2.54)
+					(name "Ubb"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -8.89 -16.51 0)
+					(length 2.54)
+					(name "Ucc"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "24"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -8.89 -19.05 0)
+					(length 2.54)
+					(name "Uss"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin tri_state line
+					(at 8.89 8.89 180)
+					(length 2.54)
+					(name "D0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1133,24 +1439,6 @@
 						)
 					)
 					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -8.89 -19.05 0)
-					(length 2.54)
-					(name "Uss"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1248,277 +1536,8 @@
 						)
 					)
 				)
-				(pin input line
-					(at -8.89 -6.35 0)
-					(length 2.54)
-					(name "PR"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "18"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -8.89 -11.43 0)
-					(length 2.54)
-					(name "Udd"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "19"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -8.89 3.81 0)
-					(length 2.54)
-					(name "A6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -8.89 -8.89 0)
-					(length 2.54)
-					(name "~{CS}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "20"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -8.89 -13.97 0)
-					(length 2.54)
-					(name "Ubb"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "21"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -8.89 -3.81 0)
-					(length 2.54)
-					(name "A9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "22"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -8.89 -1.27 0)
-					(length 2.54)
-					(name "A8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "23"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -8.89 -16.51 0)
-					(length 2.54)
-					(name "Ucc"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "24"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -8.89 6.35 0)
-					(length 2.54)
-					(name "A5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -8.89 8.89 0)
-					(length 2.54)
-					(name "A4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -8.89 11.43 0)
-					(length 2.54)
-					(name "A3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -8.89 13.97 0)
-					(length 2.54)
-					(name "A2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -8.89 16.51 0)
-					(length 2.54)
-					(name "A1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -8.89 19.05 0)
-					(length 2.54)
-					(name "A0"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin tri_state line
-					(at 8.89 8.89 180)
-					(length 2.54)
-					(name "D0"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+12V"
 			(power)
@@ -1596,7 +1615,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -1608,7 +1627,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -1622,7 +1641,8 @@
 			(symbol "+12V_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "+12V"
 						(effects
 							(font
@@ -1639,6 +1659,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+5V"
 			(power)
@@ -1716,7 +1737,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -1728,7 +1749,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -1742,7 +1763,8 @@
 			(symbol "+5V_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "+5V"
 						(effects
 							(font
@@ -1759,6 +1781,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:-5V"
 			(power)
@@ -1824,7 +1847,8 @@
 			(symbol "-5V_0_0"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "-5V"
 						(effects
 							(font
@@ -1855,6 +1879,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
@@ -1934,7 +1959,8 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "GND"
 						(effects
 							(font
@@ -1951,6 +1977,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 	)
 	(junction
@@ -9075,7 +9102,6 @@
 	)
 	(label "AB2"
 		(at 189.23 111.76 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9086,7 +9112,6 @@
 	)
 	(label "AB8"
 		(at 247.65 109.22 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9097,7 +9122,6 @@
 	)
 	(label "~{DO3}"
 		(at 161.29 134.493 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9108,7 +9132,6 @@
 	)
 	(label "~{DO2}"
 		(at 190.5 134.493 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9119,7 +9142,6 @@
 	)
 	(label "AB7"
 		(at 130.81 99.06 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9130,7 +9152,6 @@
 	)
 	(label "~{DI1}"
 		(at 242.57 90.17 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9141,7 +9162,6 @@
 	)
 	(label "~{DI5}"
 		(at 125.73 90.17 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9152,7 +9172,6 @@
 	)
 	(label "AB1"
 		(at 43.18 116.84 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9163,7 +9182,6 @@
 	)
 	(label "AB5"
 		(at 189.23 101.6 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9174,7 +9192,6 @@
 	)
 	(label "~{DI4}"
 		(at 96.52 53.34 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9185,7 +9202,6 @@
 	)
 	(label "~{DI0}"
 		(at 147.32 43.18 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9196,7 +9212,6 @@
 	)
 	(label "~{DI3}"
 		(at 184.15 90.17 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9207,7 +9222,6 @@
 	)
 	(label "AB2"
 		(at 160.02 111.76 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9218,7 +9232,6 @@
 	)
 	(label "~{DI6}"
 		(at 96.52 90.17 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9229,7 +9242,6 @@
 	)
 	(label "AB7"
 		(at 218.44 99.06 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9240,7 +9252,6 @@
 	)
 	(label "AB4"
 		(at 247.65 121.92 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9251,7 +9262,6 @@
 	)
 	(label "AB0"
 		(at 247.65 114.3 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9262,7 +9272,6 @@
 	)
 	(label "AB4"
 		(at 189.23 121.92 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9273,7 +9282,6 @@
 	)
 	(label "~{DI3}"
 		(at 251.46 50.8 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9284,7 +9292,6 @@
 	)
 	(label "AB5"
 		(at 130.81 101.6 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9295,7 +9302,6 @@
 	)
 	(label "AB9"
 		(at 130.81 104.14 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9306,7 +9312,6 @@
 	)
 	(label "AB7"
 		(at 160.02 99.06 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9317,7 +9322,6 @@
 	)
 	(label "AB3"
 		(at 101.6 119.38 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9328,7 +9332,6 @@
 	)
 	(label "AB3"
 		(at 170.18 40.64 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9339,7 +9342,6 @@
 	)
 	(label "AB1"
 		(at 130.81 116.84 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9350,7 +9352,6 @@
 	)
 	(label "AB1"
 		(at 170.18 35.56 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9361,7 +9362,6 @@
 	)
 	(label "AB9"
 		(at 247.65 104.14 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9372,7 +9372,6 @@
 	)
 	(label "AB5"
 		(at 223.52 45.72 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9383,7 +9382,6 @@
 	)
 	(label "~{DI6}"
 		(at 251.46 58.42 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9394,7 +9392,6 @@
 	)
 	(label "~{DO4}"
 		(at 132.08 134.493 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9405,7 +9402,6 @@
 	)
 	(label "AB7"
 		(at 119.38 50.8 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9416,7 +9412,6 @@
 	)
 	(label "~{DI3}"
 		(at 198.12 50.8 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9427,7 +9422,6 @@
 	)
 	(label "~{DI4}"
 		(at 251.46 53.34 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9438,7 +9432,6 @@
 	)
 	(label "AB4"
 		(at 130.81 121.92 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9449,7 +9442,6 @@
 	)
 	(label "~{DI2}"
 		(at 147.32 48.26 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9460,7 +9452,6 @@
 	)
 	(label "AB0"
 		(at 223.52 33.02 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9471,7 +9462,6 @@
 	)
 	(label "AB4"
 		(at 160.02 121.92 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9482,7 +9472,6 @@
 	)
 	(label "AB0"
 		(at 218.44 114.3 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9493,7 +9482,6 @@
 	)
 	(label "~{DO0}"
 		(at 248.92 134.493 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9504,7 +9492,6 @@
 	)
 	(label "AB1"
 		(at 119.38 35.56 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9515,7 +9502,6 @@
 	)
 	(label "~{DI6}"
 		(at 198.12 58.42 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9526,7 +9512,6 @@
 	)
 	(label "AB0"
 		(at 119.38 33.02 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9537,7 +9522,6 @@
 	)
 	(label "~{DI3}"
 		(at 147.32 50.8 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9548,7 +9532,6 @@
 	)
 	(label "~{DI5}"
 		(at 251.46 55.88 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9559,7 +9542,6 @@
 	)
 	(label "~{DI0}"
 		(at 198.12 43.18 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9570,7 +9552,6 @@
 	)
 	(label "AB2"
 		(at 101.6 111.76 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9581,7 +9562,6 @@
 	)
 	(label "~{DI2}"
 		(at 213.36 90.17 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9592,7 +9572,6 @@
 	)
 	(label "AB9"
 		(at 68.58 55.88 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9603,7 +9582,6 @@
 	)
 	(label "AB3"
 		(at 43.18 119.38 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9614,7 +9592,6 @@
 	)
 	(label "AB6"
 		(at 189.23 106.68 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9625,7 +9602,6 @@
 	)
 	(label "AB1"
 		(at 189.23 116.84 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9636,7 +9612,6 @@
 	)
 	(label "AB0"
 		(at 72.39 114.3 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9647,7 +9622,6 @@
 	)
 	(label "AB7"
 		(at 247.65 99.06 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9658,7 +9632,6 @@
 	)
 	(label "AB1"
 		(at 68.58 35.56 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9669,7 +9642,6 @@
 	)
 	(label "~{DI0}"
 		(at 251.46 43.18 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9680,7 +9652,6 @@
 	)
 	(label "~{DI6}"
 		(at 147.32 58.42 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9691,7 +9662,6 @@
 	)
 	(label "AB9"
 		(at 101.6 104.14 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9702,7 +9672,6 @@
 	)
 	(label "AB1"
 		(at 223.52 35.56 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9713,7 +9682,6 @@
 	)
 	(label "AB6"
 		(at 218.44 106.68 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9724,7 +9692,6 @@
 	)
 	(label "AB6"
 		(at 68.58 48.26 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9735,7 +9702,6 @@
 	)
 	(label "AB9"
 		(at 218.44 104.14 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9746,7 +9712,6 @@
 	)
 	(label "AB6"
 		(at 72.39 106.68 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9757,7 +9722,6 @@
 	)
 	(label "AB9"
 		(at 43.18 104.14 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9768,7 +9732,6 @@
 	)
 	(label "~{DI1}"
 		(at 147.32 45.72 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9779,7 +9742,6 @@
 	)
 	(label "AB7"
 		(at 72.39 99.06 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9790,7 +9752,6 @@
 	)
 	(label "AB8"
 		(at 160.02 109.22 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9801,7 +9762,6 @@
 	)
 	(label "AB5"
 		(at 72.39 101.6 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9812,7 +9772,6 @@
 	)
 	(label "AB8"
 		(at 218.44 109.22 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9823,7 +9782,6 @@
 	)
 	(label "AB7"
 		(at 43.18 99.06 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9834,7 +9792,6 @@
 	)
 	(label "AB2"
 		(at 218.44 111.76 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9845,7 +9802,6 @@
 	)
 	(label "AB7"
 		(at 223.52 50.8 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9856,7 +9812,6 @@
 	)
 	(label "AB5"
 		(at 247.65 101.6 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9867,7 +9822,6 @@
 	)
 	(label "AB6"
 		(at 247.65 106.68 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9878,7 +9832,6 @@
 	)
 	(label "AB3"
 		(at 189.23 119.38 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9889,7 +9842,6 @@
 	)
 	(label "AB4"
 		(at 101.6 121.92 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9900,7 +9852,6 @@
 	)
 	(label "AB7"
 		(at 189.23 99.06 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9911,7 +9862,6 @@
 	)
 	(label "AB7"
 		(at 170.18 50.8 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9922,7 +9872,6 @@
 	)
 	(label "~{DI5}"
 		(at 198.12 55.88 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9933,7 +9882,6 @@
 	)
 	(label "AB6"
 		(at 119.38 48.26 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9944,7 +9892,6 @@
 	)
 	(label "~{DI5}"
 		(at 96.52 55.88 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9955,7 +9902,6 @@
 	)
 	(label "AB3"
 		(at 130.81 119.38 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9966,7 +9912,6 @@
 	)
 	(label "AB8"
 		(at 72.39 109.22 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9977,7 +9922,6 @@
 	)
 	(label "~{DO6}"
 		(at 73.66 134.62 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9988,7 +9932,6 @@
 	)
 	(label "AB0"
 		(at 101.6 114.3 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9999,7 +9942,6 @@
 	)
 	(label "AB5"
 		(at 68.58 45.72 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10010,7 +9952,6 @@
 	)
 	(label "AB0"
 		(at 170.18 33.02 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10021,7 +9962,6 @@
 	)
 	(label "~{DI7}"
 		(at 198.12 60.96 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10032,7 +9972,6 @@
 	)
 	(label "AB4"
 		(at 119.38 43.18 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10043,7 +9982,6 @@
 	)
 	(label "AB9"
 		(at 170.18 55.88 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10054,7 +9992,6 @@
 	)
 	(label "AB9"
 		(at 223.52 55.88 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10065,7 +10002,6 @@
 	)
 	(label "AB9"
 		(at 72.39 104.14 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10076,7 +10012,6 @@
 	)
 	(label "AB2"
 		(at 43.18 111.76 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10087,7 +10022,6 @@
 	)
 	(label "AB1"
 		(at 218.44 116.84 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10098,7 +10032,6 @@
 	)
 	(label "AB1"
 		(at 160.02 116.84 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10109,7 +10042,6 @@
 	)
 	(label "AB4"
 		(at 72.39 121.92 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10120,7 +10052,6 @@
 	)
 	(label "AB1"
 		(at 247.65 116.84 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10131,7 +10062,6 @@
 	)
 	(label "AB4"
 		(at 223.52 43.18 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10142,7 +10072,6 @@
 	)
 	(label "~{DI7}"
 		(at 251.46 60.96 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10153,7 +10082,6 @@
 	)
 	(label "AB9"
 		(at 189.23 104.14 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10164,7 +10092,6 @@
 	)
 	(label "AB4"
 		(at 68.58 43.18 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10175,7 +10102,6 @@
 	)
 	(label "~{DI6}"
 		(at 96.52 58.42 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10186,7 +10112,6 @@
 	)
 	(label "AB3"
 		(at 72.39 119.38 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10197,7 +10122,6 @@
 	)
 	(label "~{DI1}"
 		(at 198.12 45.72 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10208,7 +10132,6 @@
 	)
 	(label "AB8"
 		(at 101.6 109.22 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10219,7 +10142,6 @@
 	)
 	(label "AB9"
 		(at 160.02 104.14 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10230,7 +10152,6 @@
 	)
 	(label "AB3"
 		(at 119.38 40.64 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10241,7 +10162,6 @@
 	)
 	(label "~{DI7}"
 		(at 67.31 90.17 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10252,7 +10172,6 @@
 	)
 	(label "AB6"
 		(at 101.6 106.68 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10263,7 +10182,6 @@
 	)
 	(label "AB8"
 		(at 189.23 109.22 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10274,7 +10192,6 @@
 	)
 	(label "AB3"
 		(at 247.65 119.38 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10285,7 +10202,6 @@
 	)
 	(label "~{DO1}"
 		(at 219.71 134.493 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10296,7 +10212,6 @@
 	)
 	(label "AB7"
 		(at 68.58 50.8 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10307,7 +10222,6 @@
 	)
 	(label "AB2"
 		(at 170.18 38.1 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10318,7 +10232,6 @@
 	)
 	(label "~{DI0}"
 		(at 96.52 43.18 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10329,7 +10242,6 @@
 	)
 	(label "AB5"
 		(at 43.18 101.6 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10340,7 +10252,6 @@
 	)
 	(label "AB5"
 		(at 218.44 101.6 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10351,7 +10262,6 @@
 	)
 	(label "~{DI2}"
 		(at 198.12 48.26 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10362,7 +10272,6 @@
 	)
 	(label "~{DI3}"
 		(at 96.52 50.8 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10373,7 +10282,6 @@
 	)
 	(label "~{DI4}"
 		(at 154.94 90.17 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10384,7 +10292,6 @@
 	)
 	(label "~{DO7}"
 		(at 44.45 134.493 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10395,7 +10302,6 @@
 	)
 	(label "~{DO5}"
 		(at 102.87 134.493 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10406,7 +10312,6 @@
 	)
 	(label "AB6"
 		(at 160.02 106.68 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10417,7 +10322,6 @@
 	)
 	(label "AB8"
 		(at 170.18 53.34 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10428,7 +10332,6 @@
 	)
 	(label "AB0"
 		(at 160.02 114.3 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10439,7 +10342,6 @@
 	)
 	(label "AB9"
 		(at 119.38 55.88 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10450,7 +10352,6 @@
 	)
 	(label "AB4"
 		(at 170.18 43.18 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10461,7 +10362,6 @@
 	)
 	(label "AB5"
 		(at 101.6 101.6 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10472,7 +10372,6 @@
 	)
 	(label "AB6"
 		(at 43.18 106.68 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10483,7 +10382,6 @@
 	)
 	(label "~{DI0}"
 		(at 271.78 90.17 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10494,7 +10392,6 @@
 	)
 	(label "~{DI1}"
 		(at 251.46 45.72 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10505,7 +10402,6 @@
 	)
 	(label "AB0"
 		(at 189.23 114.3 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10516,7 +10412,6 @@
 	)
 	(label "AB8"
 		(at 130.81 109.22 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10527,7 +10422,6 @@
 	)
 	(label "AB0"
 		(at 43.18 114.3 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10538,7 +10432,6 @@
 	)
 	(label "AB4"
 		(at 218.44 121.92 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10549,7 +10442,6 @@
 	)
 	(label "AB1"
 		(at 101.6 116.84 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10560,7 +10452,6 @@
 	)
 	(label "AB7"
 		(at 101.6 99.06 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10571,7 +10462,6 @@
 	)
 	(label "AB2"
 		(at 119.38 38.1 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10582,7 +10472,6 @@
 	)
 	(label "AB5"
 		(at 119.38 45.72 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10593,7 +10482,6 @@
 	)
 	(label "~{DI1}"
 		(at 96.52 45.72 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10604,7 +10492,6 @@
 	)
 	(label "AB2"
 		(at 223.52 38.1 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10615,7 +10502,6 @@
 	)
 	(label "AB0"
 		(at 68.58 33.02 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10626,7 +10512,6 @@
 	)
 	(label "AB5"
 		(at 160.02 101.6 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10637,7 +10522,6 @@
 	)
 	(label "AB5"
 		(at 170.18 45.72 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10648,7 +10532,6 @@
 	)
 	(label "AB6"
 		(at 130.81 106.68 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10659,7 +10542,6 @@
 	)
 	(label "AB2"
 		(at 68.58 38.1 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10670,7 +10552,6 @@
 	)
 	(label "~{DI7}"
 		(at 147.32 60.96 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10681,7 +10562,6 @@
 	)
 	(label "AB3"
 		(at 68.58 40.64 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10692,7 +10572,6 @@
 	)
 	(label "~{DI2}"
 		(at 96.52 48.26 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10703,7 +10582,6 @@
 	)
 	(label "~{DI4}"
 		(at 198.12 53.34 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10714,7 +10592,6 @@
 	)
 	(label "AB2"
 		(at 130.81 111.76 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10725,7 +10602,6 @@
 	)
 	(label "~{DI4}"
 		(at 147.32 53.34 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10736,7 +10612,6 @@
 	)
 	(label "~{DI7}"
 		(at 96.52 60.96 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10747,7 +10622,6 @@
 	)
 	(label "AB3"
 		(at 223.52 40.64 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10758,7 +10632,6 @@
 	)
 	(label "~{DI2}"
 		(at 251.46 48.26 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10769,7 +10642,6 @@
 	)
 	(label "AB8"
 		(at 119.38 53.34 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10780,7 +10652,6 @@
 	)
 	(label "~{DI5}"
 		(at 147.32 55.88 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10791,7 +10662,6 @@
 	)
 	(label "AB6"
 		(at 223.52 48.26 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10802,7 +10672,6 @@
 	)
 	(label "AB6"
 		(at 170.18 48.26 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10813,7 +10682,6 @@
 	)
 	(label "AB2"
 		(at 72.39 111.76 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10824,7 +10692,6 @@
 	)
 	(label "AB8"
 		(at 43.18 109.22 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10835,7 +10702,6 @@
 	)
 	(label "AB1"
 		(at 72.39 116.84 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10846,7 +10712,6 @@
 	)
 	(label "AB8"
 		(at 223.52 53.34 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10857,7 +10722,6 @@
 	)
 	(label "AB3"
 		(at 218.44 119.38 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10868,7 +10732,6 @@
 	)
 	(label "AB8"
 		(at 68.58 53.34 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10879,7 +10742,6 @@
 	)
 	(label "AB4"
 		(at 43.18 121.92 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10890,7 +10752,6 @@
 	)
 	(label "AB2"
 		(at 247.65 111.76 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10901,7 +10762,6 @@
 	)
 	(label "AB0"
 		(at 130.81 114.3 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10912,7 +10772,6 @@
 	)
 	(label "AB3"
 		(at 160.02 119.38 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10924,7 +10783,6 @@
 	(hierarchical_label "~{MCS4}"
 		(shape input)
 		(at 38.1 139.7 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10936,7 +10794,6 @@
 	(hierarchical_label "~{MCS0}"
 		(shape input)
 		(at 59.69 59.69 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10948,7 +10805,6 @@
 	(hierarchical_label "~{MCS1}"
 		(shape input)
 		(at 110.49 59.69 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10960,7 +10816,6 @@
 	(hierarchical_label "~{DI[0..7]}"
 		(shape output)
 		(at 37.465 20.32 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10972,7 +10827,6 @@
 	(hierarchical_label "~{MCS3}"
 		(shape input)
 		(at 214.63 59.69 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10984,7 +10838,6 @@
 	(hierarchical_label "~{MCS2}"
 		(shape input)
 		(at 161.29 59.69 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10996,7 +10849,6 @@
 	(hierarchical_label "~{WRB}"
 		(shape input)
 		(at 38.1 142.24 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11008,7 +10860,6 @@
 	(hierarchical_label "{AB[0..15] ~{AB[0..15]}}"
 		(shape input)
 		(at 37.465 22.86 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11020,7 +10871,6 @@
 	(hierarchical_label "~{DO[0..7]}"
 		(shape input)
 		(at 38.1 137.16 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
