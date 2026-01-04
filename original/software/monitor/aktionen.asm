@@ -919,7 +919,7 @@ BLMX:   CALL    BITIN
 BLM2:   IN      A,(PIOD2)
         XOR     B
         BIT     BID,A
-        JR      NZ,BLM1         ; FLANK ERKANNT
+        JR      NZ,BLM1         ; FLANKE ERKANNT
         DEC     E
         JR      NZ,BLM2         ; WARTEN
         JR      BL              ; TIME OUT
